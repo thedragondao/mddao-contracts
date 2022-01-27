@@ -7,3 +7,6 @@
 [submodule "/Users/kevin/dev/mddao-contracts/lib/platform"]
 	path = /Users/kevin/dev/mddao-contracts/lib/platform
 	url = https://github.com/convex-eth/platform
+[submodule "/Users/kevin/dev/mddao-contracts/lib/treasure-staking"]
+	path = /Users/kevin/dev/mddao-contracts/lib/treasure-staking
+	url = https://github.com/ghoul-sol/treasure-staking
