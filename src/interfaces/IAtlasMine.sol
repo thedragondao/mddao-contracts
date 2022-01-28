@@ -14,7 +14,12 @@ struct AtlasMineUserInfo {
 }
 
 interface IAtlasMine {
+    // Getters
+    function userInfo(address _user, uint256 _depositId) external view returns (AtlasMineUserInfo memory);
+    function treasure() external view returns (address);
+    function legion() external view returns (address);
 
+    // Methods
     function getStakedLegions(address _user) external view returns (uint256[] memory);
     function getUserBoost(address _user) external view returns (uint256);
     function getLegionBoostMatrix() external view returns (uint256[][] memory);
@@ -24,12 +29,12 @@ interface IAtlasMine {
         returns (uint256 distributedRewards, uint256 undistributedRewards);
     function getAllUserDepositIds(address _user) external view returns (uint256[] memory);
     function getExcludedAddresses() external view returns (address[] memory);
-    function getLockBoost(Lock _lock) external pure returns (uint256 boost, uint256 timelock);
-    function getVestingTime(Lock _lock) external pure returns (uint256 vestingTime);
+    function getLockBoost(AtlasMineLock _lock) external pure returns (uint256 boost, uint256 timelock);
+    function getVestingTime(AtlasMineLock _lock) external pure returns (uint256 vestingTime);
     function calcualteVestedPrincipal(address _user, uint256 _depositId) external view returns (uint256 amount);
     function pendingRewardsPosition(address _user, uint256 _depositId) external view returns (uint256 pending);
     function pendingRewardsAll(address _user) external view returns (uint256 pending);
-    function deposit(uint256 _amount, Lock _lock) external;
+    function deposit(uint256 _amount, AtlasMineLock _lock) external;
     function withdrawPosition(uint256 _depositId, uint256 _amount) external returns (bool);
     function withdrawAll() external;
     function harvestPosition(uint256 _depositId) external;
