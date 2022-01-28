@@ -1,0 +1,4 @@
+treasure-staking/=lib/treasure-staking/contracts/
+ds-test/=lib/ds-test/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
+platform/=lib/platform/
