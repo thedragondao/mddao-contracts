@@ -14,6 +14,7 @@ import {IERC20Mintable} from './drMAGIC.sol';
 // TODO: Natspec
 // TODO: Emergency functions
 // TODO: Pull out interface
+// TODO: Add migration for later altar
 contract AtlasMineStaker is Ownable {
     using SafeERC20 for IERC20;
     using Address for address;
